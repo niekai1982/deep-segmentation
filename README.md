@@ -3,32 +3,29 @@
 This repository contains several CNNs for semantic segmentation (U-Net, SegNet, ResNet, FractalNet) using Keras library.
 The code was developed assuming the use of depth data (e.g. Kinect, Asus Xtion Pro Live).
 
-This project has been included in the paper "Convolutional Networks for Semantic Heads Segmentation using Top-View RGB-D Data in Crowded Environment" accepted in Internation Conference on Pattern Recognition (ICPR), 2018.
+Implementation details for "Convolutional Networks for Semantic Heads Segmentation using Top-View RGB-D Data in Crowded Environment" accepted in Internation Conference on Pattern Recognition (ICPR), 2018.
 
-You can test these scripts on the following datasets:
+Dataset:
 
 * [TVHeads (Top-View Heads) Dataset](http://vrai.dii.univpm.it/tvheads-dataset)
-* [PIDS (Preterm Infants' Depth Silhouette) Dataset](http://vrai.dii.univpm.it/pids-dataset)
 
 [![YouTubeDemoHeads](https://img.youtube.com/vi/MWjcW-3A5-I/0.jpg)](https://www.youtube.com/watch?v=MWjcW-3A5-I)
-[![YouTubeDemoInfant](https://img.youtube.com/vi/_GCnkUXPTJk/0.jpg)](https://www.youtube.com/watch?v=_GCnkUXPTJk)
 
 ## Data
 Provided data is processed by `data.py` script. This script just loads the images and saves them into NumPy binary format files `.npy` for faster loading later.
 
 ```bash
-python data.py
+python3 data.py
 ```
 ## Models
 The provided models are basically a convolutional auto-encoders.
 ```
-python train_fractal_unet.py
-python train_resnet.py
-python train_segnet.py
-python train_unet.py
-python train_unet2.py
-python train_unet3_conv.py
-python train_unet4.py
+python3 train_fractal_unet.py
+python3 train_resnet.py
+python3 train_segnet.py
+python3 train_unet.py
+python3 train_unet2.py
+python3 train_unet3_conv.py
 ```
 These deep neural network is implemented with Keras functional API.
 
@@ -38,8 +35,9 @@ Output from the networks is a 96 x 128 which represents mask that should be lear
 
 You can test the online prediction with an OpenNI registration (`.oni` file).
 ```
-python online_prediction.py --v <oni_video_path>
+python3 online_prediction.py --v <oni_video_path>
 ```
+Requirement for this is OpenNI2 installation: https://github.com/occipital/OpenNI2, then link the libOpenNI2.so and the OpenNI2 directory in the script path.
 
 ### Python Environment Setup
 
@@ -65,6 +63,14 @@ Install the others library:
 ```bash
 pip3 install --upgrade keras scikit-learn scikit-image h5py opencv-python primesense
 ```
+
+### Run
+* Create a folder "raw" in the same filesystem level of the above python scripts
+* Download the dataset and extract all the images in a folder raw/train.
+* Run ``` python3 data.py``` a folder "npy" will be created containig Numpy binary format npy files with traning and validation dataset.
+* Run the above python training and testing scripts, for example ``` python3 train_unet3_conv.py```
+* Log files with final results ``` log_conv_8.csv ``` and ``` log_conv_16.csv ``` will be created.
+* Predicted images for the test data will be stored in folders preds_16 and preds_8
 
 ### Author
 * Daniele Liciotti | [GitHub](https://github.com/danielelic)
