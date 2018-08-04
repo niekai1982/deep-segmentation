@@ -5,6 +5,8 @@ The code was developed assuming the use of depth data (e.g. Kinect, Asus Xtion P
 
 Implementation details for "Convolutional Networks for Semantic Heads Segmentation using Top-View RGB-D Data in Crowded Environment" accepted in Internation Conference on Pattern Recognition (ICPR), 2018.
 
+Tested on: Ubuntu 16.04, Keras 2.2.2, Tensorflow 1.7.0, Python 3.5.2
+
 Dataset:
 
 * [TVHeads (Top-View Heads) Dataset](http://vrai.dii.univpm.it/tvheads-dataset)
