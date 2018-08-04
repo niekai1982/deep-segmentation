@@ -39,7 +39,7 @@ You can test the online prediction with an OpenNI registration (`.oni` file).
 ```
 python3 online_prediction.py --v <oni_video_path>
 ```
-Requirement for this is OpenNI2 installation: https://github.com/occipital/OpenNI2, then link the libOpenNI2.so and the OpenNI2 directory in the script path.
+Requirement for this is OpenNI2 installation: https://github.com/occipital/OpenNI2, then link the libOpenNI2.so and the OpenNI2 directory in the script path. Before launching the script create a folder ```predicted_images```.
 
 ### Python Environment Setup
 
