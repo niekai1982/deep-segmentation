@@ -67,12 +67,12 @@ pip3 install --upgrade keras scikit-learn scikit-image h5py opencv-python primes
 ```
 
 ### Run
-* Create a folder "raw" in the same filesystem level of the above python scripts
-* Download the dataset and extract all the images in a folder raw/train.
+* Create a folder ```raw``` in the same filesystem level of the above python scripts
+* Download the dataset and extract all the images in a folder ```raw/train```.
 * Run ``` python3 data.py``` a folder "npy" will be created containig Numpy binary format npy files with traning and validation dataset.
 * Run the above python training and testing scripts, for example ``` python3 train_unet3_conv.py```
 * Log files with final results ``` log_conv_8.csv ``` and ``` log_conv_16.csv ``` will be created.
-* Predicted images for the test data will be stored in folders preds_16 and preds_8
+* Predicted images for the test data will be stored in folders ```preds_16``` and ```preds_8```
 
 ### Author
 * Daniele Liciotti | [GitHub](https://github.com/danielelic)
