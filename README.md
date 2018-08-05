@@ -7,6 +7,8 @@ Implementation details for "Convolutional Networks for Semantic Heads Segmentati
 
 Tested on: Ubuntu 16.04, Keras 2.2.2, Tensorflow 1.7.0, Python 3.5.2
 
+This repo just contain some implementation details for Reproducible Label in Pattern Recognition, for the complete project please visit the original repository by  [GitHub](https://github.com/danielelic).
+
 Dataset:
 
 * [TVHeads (Top-View Heads) Dataset](http://vrai.dii.univpm.it/tvheads-dataset)
